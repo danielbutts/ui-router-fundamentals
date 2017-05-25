@@ -3,13 +3,10 @@
 
   angular.module('app')
     .component('houseShow', {
-      controller: function (houseService) {
+      controller: function ($stateParams, houseService) {
         const vm = this
-
         vm.$onInit = function () {
-          // TODO: figure out how to pull the house id from the URL
-          const houseId = "";
-          vm.house = houseService.findById(houseId)
+          vm.house = houseService.findById($stateParams.houseId)
         }
 
       },
@@ -18,7 +15,8 @@
 
         <p>{{$ctrl.house.address}}</p>
 
-        <!-- TODO: add link here -->
+        <a ui-sref="list-houses">Return Home</a>
+
       `
     })
 
