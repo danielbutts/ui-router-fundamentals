@@ -11,7 +11,6 @@
 
     $stateProvider
     .state({ name: 'home', url: '/', component: 'houseList', })
-    .state({ name: 'list-houses', url: '/houses', component: 'houseList', })
     .state({ name: 'new-house', url: '/houses/new', component: 'houseNew', })
     .state({ name: 'show-house', url: '/houses/:houseId', component: 'houseShow', })
   }

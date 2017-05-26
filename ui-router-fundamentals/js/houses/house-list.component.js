@@ -15,7 +15,7 @@
 
         <ul>
           <li ng-repeat="house in $ctrl.houses">
-            <a ui-sref="show-house({ houseId: house.id })">{{house.name}} @ {{house.address}}</a>
+            <a ui-sref="show-house({ houseId: house.id })">{{house.name}}</a>
           </li>
         </ul>
 

@@ -11,8 +11,9 @@
         }
 
         vm.addHouse = function () {
-          houseService.addHouse(vm.house)
-          // TODO: go to the appropriate URL here
+          const id = houseService.addHouse(vm.house)
+          console.log('vm.addHouse',vm.house, id);
+          $state.go('show-house',{houseId: id})
         }
       },
       template: `

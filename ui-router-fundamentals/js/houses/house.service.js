@@ -5,13 +5,13 @@
     .service('houseService', function () {
       this.houses = [
         {id: 1, name: 'Spacious two bedroom', address: '10 Main St'},
-        {id: 2, name: 'Smaller two bedroom', address: '11 Main St'},
-        {id: 3, name: 'How is this even a house', address: '14 Main St'},
       ]
 
       this.addHouse = function (house) {
+        const id = this.houses.length + 1
+        house.id = id
         this.houses.push(house)
-        house.id = this.houses.length
+        return id
       }
 
       this.findById = function (id) {

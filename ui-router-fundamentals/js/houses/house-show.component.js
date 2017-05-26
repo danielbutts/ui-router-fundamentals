@@ -15,7 +15,7 @@
 
         <p>{{$ctrl.house.address}}</p>
 
-        <a ui-sref="list-houses">Return Home</a>
+        <a ui-sref="home">Return Home</a>
 
       `
     })
